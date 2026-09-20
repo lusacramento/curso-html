@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Componentes Reutilizáveis - iframe</title>
+    <meta name="description" content="Resumo prático sobre a reutilização de layouts usando iframe em HTML.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <h1>Componentes Reutilizáveis</h1>
+    <p>
+        Para evitar a repetição manual de códigos que aparecem em múltiplas páginas (como menus de navegação e rodapés),
+        podemos isolar esses layouts em arquivos independentes e embuti-los onde for necessário.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;iframe&gt;&lt;/iframe&gt; (Janela Incorporada)
+    </h2>
+    <p>
+        Significa Inline Frame (Quadro Incorporado).
+    </p>
+    <p>
+        <b>O que faz:</b> Cria uma espécie de <b>"janela" ou abertura</b> na página atual que permite renderizar e
+        exibir um segundo documento HTML completamente separado e independente ali dentro.
+    </p>
+
+    <br />
+    <hr />
+
+    <h3>Atributo src=""</h3>
+    <p>
+        O atributo <b>src</b> (source) define o caminho ou endereço do arquivo HTML externo que você deseja injetar na
+        janela do <b>&lt;iframe&gt;</b>.
+    </p>
+
+    <br />
+    <hr />
+
+    <h3>Atributo frameborder=""</h3>
+    <p>
+        O atributo <b>frameborder</b> define se a janela externa terá uma borda divisória ao redor dela. Definir
+        <b>frameborder="0"</b> remove qualquer linha divisória padrão do navegador, integrando o visual perfeitamente ao
+        seu layout principal.
+    </p>
+
+    <br />
+    <hr />
+
+    <h3>Atributo target="" (Destino dos Links)</h3>
+    <p>
+        Quando usamos links <b>&lt;a&gt;</b> dentro de uma página que está embutida em um <b>&lt;iframe&gt;</b>, o
+        comportamento padrão do navegador é abrir o novo link <b>dentro da própria janelinha</b>. Para mudar isso,
+        usamos o atributo <b>target</b> nos links do arquivo embutido:
+    </p>
+    <p>
+        O valor <b>target="_parent"</b> avisa ao navegador para quebrar a janela do iframe e <b>abrir o link na página
+            principal do site</b> (a página mãe). Outro valor comum é o <b>target="_blank"</b>, que abre o link em uma
+        nova aba separada.
+    </p>
+
+    <pre><code class="language-html">&lt;!-- Código que deve ir DENTRO do arquivo embutido (ex: menu.html) --&gt;
+&lt;nav&gt;
+    &lt;a href="index.html" target="_parent"&gt;Início&lt;/a&gt;
+    &lt;a href="tabelas.html" target="_parent"&gt;Tabelas&lt;/a&gt;
+    &lt;a href="https://google.com" target="_blank"&gt;Abrir Google em Nova Aba&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <!-- Exemplo carregando um arquivo hipotético de menu que aplica as regras de target -->
+    <iframe src="listas.html" width="100%" height="200px" frameborder="0"
+        style="border: 2px solid #007acc; border-radius: 4px; background: #fff;"></iframe>
+
+    <br />
+    <hr />
+
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+
+    <script src="/js/prism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tags de Formatação</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <h1>Tags de Formatação</h1>
+    <h2>&lt;strong&gt;&lt;/strong&gt; e &lt;b&gt;&lt;/b&gt; (Destaques em Negrito)</h2>
+    <p>
+        <b>&lt;strong&gt;:</b> Indica que o texto tem grande importância, urgência ou gravidade (o Google e os leitores
+        de tela prestam
+        atenção nele).
+    </p>
+    <p>
+        <b>&lt;b&gt;:</b> Modifica o texto para negrito por motivos puramente estéticos, sem dar nenhuma importância
+        real à palavra.
+    </p>
+    <pre><code class="language-html">
+        Código:
+        &lt;p&gt;Isto é muito &lt;strong&gt;importante&lt;/strong&gt;!&lt;/p&gt;
+        &lt;p&gt;Isto é um &lt;negrito&gt;&lt;/b&gt;.&lt;/p&gt;
+    </code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Isto é muito <strong>importante</strong>!</p>
+    <p>Isto é um <b>negrito</b>.</p>
+
+    <br />
+    <hr />
+
+    <h2>&lt;em&gt;&lt;/em&gt; e &lt;i&gt;&lt;/i&gt; (Destaques em Itálico)</h2>
+    <p>
+        <b>&lt;em&gt;</b>: Significa Emphasis (Ênfase). Usado quando você quer enfatizar uma palavra ao ler (muda o tom
+        de voz nos leitores
+        de tela).
+    </p>
+    <p>
+        <b>&lt;i&gt;</b>: Modifica o texto para itálico para indicar termos técnicos, palavras em outros idiomas ou
+        pensamentos, sem dar
+        ênfase de voz.
+    </p>
+    <pre><code class="language-html">
+            Código:
+            &lt;p&gt;Isto é uma &lt;em&gt;ênfase&lt;/em&gt;!&lt;/p&gt;
+            &lt;p&gt;Isto é um &lt;i&gt;itálico&lt;/i&gt;.&lt;/p&gt;
+    
+    </code></pre>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Isto é uma <em>ênfase</em>!</p>
+    <p>Isto é um <i>itálico</i>.</p>
+
+    <br />
+    <hr />
+
+    <h2>&lt;u&gt;&lt;/u&gt; (Sublinhado)</h2>
+    <p>Avisa que o texto tem uma <b>linha decorativa por baixo</b>. Antigamente indicava texto sublinhado, mas hoje é
+        usada
+        para representar <b>nomes próprios em chinês</b> ou termos com <b>erros de ortografia</b> apontados.
+    </p>
+    <p>
+        <b>Regra de ouro:</b> <b>Evite</b> usar para não confundir o usuário achando que é um link (<a>).
+
+    </p>
+
+    <pre><code class="language-html">
+            Código:
+            &lt;p&gt;Isto é um &lt;u&gt;sublinhado&lt;/u&gt;!&lt;p&gt;
+    </code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+        <p>Isto é um <u>sublinhado</u>!</p>
+    </b>
+
+    <br />
+    <hr />
+
+    <h2>&lt;mark&gt;&lt;/mark&gt; (Marcador de Texto)</h2>
+    <p>
+        Funciona exatamente como uma caneta <b>marca-texto amarela</b>. Realça visualmente um trecho para indicar que
+        ele é muito relevante dentro de uma pesquisa ou contexto atual.
+    </p>
+
+    <pre><code class="language-html">
+            Código:
+            &lt;p&gt;A palavra a seguir está &lt;mark&gt;destacada&lt;/mark&gt;!&lt;/p&gt;
+    </code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+
+    <p>A palavra a seguir está <mark>destacada</mark>!</p>
+    <br />
+    <hr />
+
+    <h2>&lt;small&gt;&lt;/small&gt; (Texto Secundário)</h2>
+    <p>
+        Deixa a letra <b>um pouco menor</b> que o texto normal. Semanticamente, serve para indicar as <b>"letras
+            miúdas"</b> de um site, como avisos de direitos autorais (Copyright), termos de uso ou restrições legais.
+    </p>
+
+    <pre><code class="language-html">
+            Código:
+            &lt;p&gt;Leiam sempre as &lt;small&gt;letras miúdas&lt;small&gt;!&lt;/p&gt;
+    
+    </code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Leiam sempre as <small>letras miúdas</small>!</p>
+
+    <br />
+    <hr />
+
+    <h2>&lt;del&gt;&lt;/del&gt; e &lt;ins&gt;&lt;/ins&gt; (Edições de Texto)</h2>
+    <p>
+        <b>&lt;del&gt;</b>: Significa Deleted (Deletado). <b>Risca o texto</b> com uma linha no meio para mostrar que
+        aquela informação foi removida ou atualizada.
+    </p>
+    <p>
+        <b>&lt;ins&gt;</b>: Significa Inserted (Inserido). <b>Sublinha o texto</b> para mostrar que aquela informação
+        foi <b>adicionada recentemente</b> ao documento.
+    </p>
+
+    <pre><code class="language-html">
+            Código:
+            &lt;p&gt;
+                A palavra &lt;del&gt;avião&lt;/del&gt;&lt;br /&gt;
+                foi alterada para &lt;ins&gt;barco&lt;/ins&gt;.
+            &lt;/p&gt;
+    </code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+        <p>
+            A palavra <del>avião</del><br />
+            foi alterada para <ins>barco</ins>.
+        </p>
+    </b>
+
+    <br />
+    <hr />
+
+    <h2>&lt;sub&gt;&lt;/sub&gt; e &lt;sup&gt;&lt;/sup&gt; (Textos Deslocados)</h2>
+    <p>
+        <b>&lt;sub&gt;</b>: Significa Subscript (Subscrito). Deixa a <b>letra menor e rebaixada</b> (na parte inferior).
+        Muito
+        usada em fórmulas químicas. Ex: H<sub>2</sub>O.
+    </p>
+    <p>
+        <b>&lt;sup&gt;</b>: Significa Superscript (Sobrescrito). Deixa a letra <b>menor e elevada</b> (na parte
+        superior).
+        Muito usada em potências matemáticas ou indicadores ordinais. Ex: 10<sup>2</sup> ou 3<sup>º</sup>.
+    </p>
+
+    <pre><code class="language-html">
+            Código:
+            &lt;p&gt;2&lt;sup&gt;4&lt;/sup&gt; é igual à 16!&lt;/p&gt;
+            &lt;p&gt;O CO&lt;sub&gt;2&lt;/sub&gt; é prejudicial a saúde e a natureza.&lt;/p&gt;
+    
+    </code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>2<sup>4</sup> é igual à 16!</p>
+    <p>O CO<sub>2</sub> é prejudicial a saúde e a natureza.</p>
+
+    <br />
+    <hr />
+
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+    <script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

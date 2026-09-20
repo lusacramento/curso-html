@@ -1,0 +1,45 @@
+html {
+    margin: auto;
+}
+body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+title {
+    display: flex;
+    justify-content: center;
+    color: #007acc;
+    }
+
+.flex {
+    display: flex;
+
+}
+
+.img{
+    display: flex;
+    justify-self: center;
+}
+
+.img-small{
+    height: 200px;
+}
+
+ h1 {
+    display: flex;
+    color: #007acc;
+    justify-content: center;
+}
+
+table {
+    justify-self: center;
+}
+
+.form{
+    justify-self: center;
+}

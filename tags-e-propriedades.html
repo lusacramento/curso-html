@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tags e propriedades</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <h1>Tags e Propriedades</h1>
+    <h2>O que é tag?</h2>
+    <p>Uma tag é um comando (ou uma <b>etiqueta</b>) que avisa ao navegador o que cada elemento do seu site deve ser.
+        Elas funcionam como os blocos de construção da página. Exemplo: A tag <b>&lt;p&gt;</b> avisa: "O texto a seguir
+        é um parágrafo". A tag <b>&lt;img&gt;</b> avisa: "Aqui entra uma imagem".
+    </p>
+    <h2>O que é uma propriedade (ou atributo) de uma tag?</h2>
+    <p>Uma propriedade (geralmente chamada de atributo) é uma <b>informação extra</b> que
+        você coloca dentro da tag para <b>mudar o comportamento dela ou dar uma instrução
+            específica</b>. Exemplo: Se a tag <b>&lt;a&gt;</b> cria um link, a propriedade<strong>
+            href="..."</strong> serve para dizer para qual site esse link deve levar o usuário.</p>
+    <h2>Diferença entre tags com fechamento e tags sem fechamento</h2>
+    <h3>Tags que precisam abrir e fechar:</h3>
+    <p>São tags que funcionam como uma "caixa" ou um <b>"envelope"</b>. Elas servem para guardar algo dentro
+        delas (seja um texto ou outras tags). Você abre com <b>&lt;tag&gt;</b> e fecha colocando uma barra
+        <b>&lt;/tag&gt;</b>.
+    </p>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <pre><code class="language-html">
+        <b>&lt;h1&gt;</b>Meu Título<b>&lt;/h1&gt;</b> (O texto fica guardado dentro da tag).
+    </code></pre>
+    <h3>Tags que Não precisam fechar (Tags Autocontidas):</h3>
+    <p>São tags que <b>não guardam nenhum texto dentro delas</b>. Elas servem apenas para inserir um
+        elemento direto na página de uma vez só.</p>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <pre><code class="language-html">
+        <b>&lt;img /&gt;</b> Ela apenas joga uma imagem na tela
+        <b>&lt;br /&gt;</b> Ela apenas pula uma linha. Não existe um "conteúdo" para colocar dentro delas.
+    </code></pre>
+
+    <br />
+    <hr />
+
+    <h2>Principais Tags</h2>
+    <h3>&lt;!DOCTYPE html&gt; (A Declaração)</h3>
+    <p>declaração <u>obrigatória</u> que deve ficar na primeiríssima linha do seu arquivo.O
+        que faz: Ela avisa ao navegador: "Atenção, este documento foi escrito na versão mais
+        moderna do HTML, o HTML5". Sem ela, o navegador entra em um modo antigo de compatibilidade e o site pode
+        quebrar.</p>
+
+    <br />
+    <hr />
+
+    <h3>&lt;html&gt;&lt;/html&gt; (A Raiz do Site)</h3>
+    <p>Esta é a tag mãe de todas as outras. Tudo o que existe no seu código <b>deve ser escrito
+            obrigatoriamente dentro dela</b> <u>(com exceção do doctype)</u>.</p>
+    <p><b>O que faz:</b> Ela avisa onde o seu código HTML começa e onde ele termina. é
+        também nela que você <b>define o idioma principal</b> da página usando a propriedade lang
+        (ex: <b>&lt;html lang="pt-BR"&gt;</b>).</p>
+
+    <br />
+    <hr />
+
+    <h3>&lt;head&gt;&lt;/head&gt; (A Cabeça Oculta)</h3>
+    <p>é a <b>"mente"</b> do seu site. Tudo o que você coloca dentro do <b>&lt;head&gt;</b> serve para
+        <b>dar instruções ao navegador</b> e aos motores de busca, ou seja, são
+        informações que ficam invisíveis para quem acessa a página.
+    </p>
+    <p><b>O que faz:</b> Ela <b>guarda as configurações</b> de bastidores, como o título que
+        aparece na aba do navegador <b>(&lt;title&gt;)</b>, o formato dos acentos (<b>&lt;meta charset="UTF-8"&gt;</b>),
+        as configurações de celular e as ligações com arquivos de estilo (CSS).</p>
+    <h3>&lt;body&gt;&lt;/body&gt; (O Corpo Visível)</h3>
+    <p>Se o &lt;head&gt; é a mente oculta do site, o <strong>&lt;body&gt; é o corpo</strong> real.
+        é a tag que guarda absolutamente <strong>tudo</strong> o <strong>que o usuário consegue
+            ver</strong>, ler e interagir quando acessa a sua página.</p>
+    <p><b>O que faz:</b> Ela funciona como uma grande tela em branco. Qualquer elemento visível do seu site deve
+        ser colocado obrigatoriamente dentro dela.</p>
+    <p><strong>O que vive dentro dele:</strong> é aqui que você vai colocar seus textos, títulos,
+        parágrafos, imagens, links, botões, formulários, tabelas e vídeos.</p>
+    <h3>Como o &lt;head&gt; e o &lt;body&gt; se conectam?</h3>
+    <p>Eles trabalham sempre em dupla e nunca se misturam. Pense neles como os bastidores e o palco de um teatro:</p>
+    <p><strong>O &lt;head&gt; são os bastidores:</strong> Configura as luzes, o idioma da peça, as regras
+        e prepara a estrutura (invisível para o público).</p>
+    <p><strong>O &lt;body&gt; é o palco:</strong> Onde os atores entram e o show realmente acontece (tudo o que o
+        público enxerga).</p>
+
+    <br />
+    <hr />
+
+    <h3>&lt;!-- --&gt; (Comentários)</h3>
+    <p>Tudo o que você escrever dentro dela <strong>será completamente ignorado</strong> pelo navegador e
+        não vai aparecer na tela para o usuário. Ela funciona como um bloco de notas exclusivo para quem
+        está escrevendo o código.</p>
+    <h4>Para que ela serve no dia a dia?</h4>
+    <ol>
+        <li><strong>Deixar Anotações e Lembretes: </strong>Explicar para você mesmo (ou para outros
+            programadores) o que aquela parte do código faz.</li>
+        <li><strong>Organizar o Código:</strong> Dividir o seu site em seções visuais facilitando a
+            leitura quando o arquivo ficar muito grande.</li>
+        <li><strong>Desativar Códigos Temporariamente ("Comentar o Código"):</strong> Se você quiser
+            testar como o site fica sem um parágrafo ou imagem, em vez de apagar o código, você o
+            coloca dentro de um comentário. O navegador deixa de exibi-lo, mas ele continua guardado ali caso
+            você queira usá-lo depois.</li>
+    </ol>
+
+    <br />
+    <hr />
+
+    <h2>Estrutura básica do html</h2>
+    <pre><code class="language-html">
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-BR"&gt;
+        
+        &lt;head&gt;
+            &lt;!-- Configurações (Invisível) --&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;Minha Página de Estudos&lt;/title&gt;
+        &lt;/head&gt;
+        
+        &lt;body&gt;
+            &lt;!-- Conteúdo (Visível na tela) --&gt;
+            &lt;h1&gt;Bem-vindo ao meu resumo!&lt;/h1&gt;
+            &lt;p&gt;Este texto está aparecendo porque foi escrito dentro da tag body.&lt;/p&gt;
+        &lt;/body&gt;
+        
+        &lt;/html&gt;
+    </code></pre>
+    <br />
+    <hr />
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+    <script src="/js/prism.js"></script>
+</body>
+
+</html>
