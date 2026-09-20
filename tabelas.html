@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tabelas</title>
+    <meta name="description" content="Resumo prático sobre a criação de tabelas em HTML.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <h1>Tabelas</h1>
+    <p>
+        Para criar qualquer tabela no HTML, nós estruturamos os dados em linhas e colunas através de um conjunto de tags
+        específicas, onde cada linha agrupa células de cabeçalho ou de dados comuns.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;table&gt;&lt;/table&gt; (A Tabela)
+    </h2>
+    <p>
+        Significa Table (Tabela).
+    </p>
+    <p>
+        <b>O que faz:</b> É a tag principal que <b>envolve toda a estrutura</b> da tabela. Ela avisa ao navegador onde a
+        área de dados tabelados começa e termina.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;tr&gt;&lt;/tr&gt; (Linha da Tabela)
+    </h2>
+    <p>
+        Significa Table Row (Linha da Tabela).
+    </p>
+    <p>
+        <b>O que faz:</b> É usada para <b>criar uma linha horizontal</b> dentro da tabela. Todo o conteúdo de cabeçalhos
+        ou dados deve obrigatoriamente ficar guardado dentro de uma <b>&lt;tr&gt;</b>.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;th&gt;&lt;/th&gt; e &lt;td&gt;&lt;/td&gt; (Células da Tabela)
+    </h2>
+    <p>
+        <b>&lt;th&gt;</b> significa Table Header (Cabeçalho da Tabela) e <b>&lt;td&gt;</b> significa Table Data (Dado da
+        Tabela).
+    </p>
+    <p>
+        <b>O que faz:</b> A tag <b>&lt;th&gt;</b> cria uma célula de <b>título da coluna</b> (o texto fica em negrito e
+        centralizado automaticamente). A tag <b>&lt;td&gt;</b> cria uma <b>célula comum de dado</b> (texto normal
+        alinhado à esquerda).
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>Atributo border=""</h2>
+    <p>
+        O atributo <b>border</b> define a largura em pixels das linhas divisórias da tabela. Por padrão as tabelas
+        nascem
+        invisíveis (border="0"). Definir <b>border="1"</b> desenha linhas finas delimitando os dados.
+    </p>
+
+    <h3>Como ela funciona?</h3>
+    <p>
+        O valor inserido define a espessura da linha em pixels. O valor <b>border="0"</b> deixa a tabela transparente,
+        <b>border="1"</b> cria linhas finas tradicionais e valores maiores (como <b>border="5"</b>) criam uma moldura
+        externa mais grossa e tridimensional.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>Exemplo de tabela</h2>
+
+
+
+    <pre><code class="language-html">
+        Código:
+        &lt;table border="3"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nome&lt;/th&gt;
+            &lt;th&gt;Idade&lt;/th&gt;
+            &lt;th&gt;E-mail&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Ana Silva&lt;/td&gt;
+            &lt;td&gt;28&lt;/td&gt;
+            &lt;td&gt;ana@email.com&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Bruno Costa&lt;/td&gt;
+            &lt;td&gt;34&lt;/td&gt;
+            &lt;td&gt;bruno@email.com&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Carla Souza&lt;/td&gt;
+            &lt;td&gt;22&lt;/td&gt;
+            &lt;td&gt;carla@email.com&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <table border="3" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>E-mail</th>
+        </tr>
+        <tr>
+            <td>Ana Silva</td>
+            <td>28</td>
+            <td>ana@email.com</td>
+        </tr>
+        <tr>
+            <td>Bruno Costa</td>
+            <td>34</td>
+            <td>bruno@email.com</td>
+        </tr>
+        <tr>
+            <td>Carla Souza</td>
+            <td>22</td>
+            <td>carla@email.com</td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+
+    <script src="/js/prism.js"></script>
+</body>
+
+</html>

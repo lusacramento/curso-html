@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tags Semânticas de Layout</title>
+    <meta name="description" content="Resumo prático sobre a criação de estruturas usando HTML semântico.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <h1>Tags Semânticas de Layout</h1>
+    <p>
+        As tags semânticas servem para dar significado à estrutura do site, indicando claramente ao navegador e aos
+        motores de busca (como o Google) o papel de cada seção do layout, substituindo o uso excessivo de blocos
+        genéricos.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;header&gt;&lt;/header&gt; (Cabeçalho da Página)
+    </h2>
+    <p>
+        <b>O que faz:</b> Define o topo ou o cabeçalho de uma página ou de uma seção específica. Geralmente guarda o
+        logotipo da empresa, o título do site e barras de navegação.
+    </p>
+
+    <pre><code class="language-html">&lt;header style="background: #333; color: white; padding: 10px;"&gt;
+    &lt;h1&gt;Meu Logotipo&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <header style="background: #333; color: white; padding: 10px; border-radius: 4px;">
+        <span style="font-size: 20px; font-weight: bold; font-family: sans-serif;">Meu Logotipo</span>
+    </header>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;nav&gt;&lt;/nav&gt; (Menu de Navegação)
+    </h2>
+    <p>
+        Significa Navigation (Navegação).
+    </p>
+    <p>
+        <b>O que faz:</b> Agrupa um conjunto de links de navegação do site. É a tag ideal para criar menus principais,
+        listas de links internos ou paginações.
+    </p>
+
+    <pre><code class="language-html">&lt;nav style="background: #e0e0e0; padding: 8px;"&gt;
+    &lt;a href="#"&gt;Início&lt;/a&gt; | &lt;a href="#"&gt;Sobre&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <nav style="background: #e0e0e0; padding: 8px; border-radius: 4px; font-family: sans-serif;">
+        <a href="#" style="color: #007acc; text-decoration: none; font-weight: bold;">Início</a> |
+        <a href="#" style="color: #007acc; text-decoration: none; font-weight: bold;">Sobre</a>
+    </nav>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;main&gt;&lt;/main&gt; (Conteúdo Principal)
+    </h2>
+    <p>
+        Significa Main (Principal).
+    </p>
+    <p>
+        <b>O que faz:</b> Envolve o <b>conteúdo central e exclusivo</b> da sua página. Ela deve aparecer apenas uma
+        única vez por arquivo HTML, ignorando elementos repetidos como menus globais ou rodapés.
+    </p>
+
+    <pre><code class="language-html">&lt;main style="border: 2px dashed #007acc; padding: 10px;"&gt;
+    &lt;h2&gt;Assunto do Dia&lt;/h2&gt;
+    &lt;p&gt;Este é o conteúdo principal.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <main style="border: 2px dashed #007acc; padding: 10px; border-radius: 4px; font-family: sans-serif;">
+        <h3 style="margin-top: 0;">Assunto do Dia</h3>
+        <p style="margin-bottom: 0;">Este é o conteúdo principal da página, onde fica a informação de maior relevância.
+        </p>
+    </main>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;article&gt;&lt;/article&gt; (Artigo / Conteúdo Independente)
+    </h2>
+    <p>
+        Significa Article (Artigo).
+    </p>
+    <p>
+        <b>O que faz:</b> Representa um bloco de conteúdo completo que faz sentido por si só e que poderia ser recortado
+        e distribuído em outro site isoladamente, como notícias ou posts de blog.
+    </p>
+
+    <pre><code class="language-html">&lt;article style="background: #fff; border: 1px solid #ccc; padding: 10px;"&gt;
+    &lt;h3&gt;Notícia Urgente&lt;/h3&gt;
+    &lt;p&gt;HTML5 revolucionou a web semântica.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <article
+        style="background: #fff; border: 1px solid #ccc; padding: 10px; border-radius: 4px; font-family: sans-serif;">
+        <h4 style="margin-top: 0; color: #d9534f;">Notícia Urgente</h4>
+        <p style="margin-bottom: 0;">O HTML Semântico melhora significativamente o rankeamento e leitura de páginas
+            pelos robôs do Google.</p>
+    </article>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;section&gt;&lt;/section&gt; (Seção do Documento)
+    </h2>
+    <p>
+        Significa Section (Seção).
+    </p>
+    <p>
+        <b>O que faz:</b> Divide temas ou capítulos diferentes dentro de uma mesma página. Costuma agrupar conteúdos
+        relacionados que compartilham uma mesma temática ou título regional.
+    </p>
+
+    <pre><code class="language-html">&lt;section style="background: #f0f8ff; padding: 10px;"&gt;
+    &lt;h3&gt;Módulo 1: Introdução&lt;/h3&gt;
+&lt;/section&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <section
+        style="background: #f0f8ff; padding: 10px; border-radius: 4px; border-left: 4px solid #007acc; font-family: sans-serif;">
+        <h4 style="margin-top: 0;">Módulo 1: Introdução ao Layout</h4>
+        <p style="margin-bottom: 0;">Esta seção agrupa todas as lições iniciais de anatomia de uma página.</p>
+    </section>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;aside&gt;&lt;/aside&gt; (Barra Lateral / Conteúdo Secundário)
+    </h2>
+    <p>
+        Significa Aside (À parte / Lateral).
+    </p>
+    <p>
+        <b>O que faz:</b> Guarda conteúdos que são apenas **indiretamente relacionados** ao conteúdo principal, como
+        barras de pesquisa laterais, anúncios, listas de tags ou biografias do autor.
+    </p>
+
+    <pre><code class="language-html">&lt;aside style="background: #fff9e6; padding: 10px;"&gt;
+    &lt;p&gt;Anúncio Relacionado&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <aside
+        style="background: #fff9e6; padding: 10px; border-radius: 4px; border: 1px dashed #f0ad4e; font-family: sans-serif;">
+        <span style="font-weight: bold; color: #f0ad4e;">Dica de Estudo:</span>
+        <p style="margin-top: 5px; margin-bottom: 0;">Use o validador da W3C para checar se a estrutura do seu HTML5
+            semântico está correta.</p>
+    </aside>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;footer&gt;&lt;/footer&gt; (Rodapé da Página)
+    </h2>
+    <p>
+        Significa Footer (Rodapé).
+    </p>
+    <p>
+        <b>O que faz:</b> Define a base ou encerramento de um layout. Costuma exibir informações sobre direitos
+        autorais, links para políticas de privacidade, dados de contato e mapas de localização rápidos.
+    </p>
+
+    <pre><code class="language-html">&lt;footer style="background: #222; color: #aaa; padding: 10px; text-align: center;"&gt;
+    &lt;p&gt;&amp;copy; 2026 Meu Caderno de Estudos&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <footer
+        style="background: #222; color: #aaa; padding: 10px; text-align: center; border-radius: 4px; font-family: sans-serif; font-size: 14px;">
+        <p style="margin: 0;">&copy; 2026 Meu Caderno de Estudos. Todos os direitos reservados.</p>
+    </footer>
+
+    <br />
+    <hr />
+
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+
+    <script src="/js/prism.js"></script>
+</body>
+
+</html>

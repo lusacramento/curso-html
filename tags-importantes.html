@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tags importantes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <h1>Tags importantes</h1>
+
+    <h2>&lt;h1&gt;&lt;/h1&gt; até &lt;h6&gt;&lt;/h6&gt; (Títulos e Subtítulos)</h2>
+    <p>
+        São as tags usadas para definir os <b>títulos</b> do seu site, variando de importância do 1 ao 6.
+    </p>
+    <p>
+        <b>O que faz:</b> O <b>&lt;h1&gt;</b> é o título principal da página (o maior e mais importante). O
+        <b>&lt;h2&gt;</b> é um subtítulo,
+        o <b>&lt;h3&gt;</b> um sub-subtítulo, e assim por diante.
+    </p>
+    <p>
+        <b>Regra de Ouro:</b> O Google exige que cada página tenha apenas um
+        <b>&lt;h1&gt;</b> para saber qual é o assunto principal do seu site.
+    </p>
+    <pre><code class="language-html">
+        Código:
+        &lt;h1&gt;Isto é um título h1&lt;/h1&gt;
+        &lt;h2&gt;Isto é um subtítulo h2&lt;/h2&gt;
+        &lt;h2&gt;Isto é um subtítulo h2&lt;/h2&gt;
+        &lt;h3&gt;Isto é um subtítulo h3&lt;/h3&gt;
+        &lt;h4&gt;Isto é um subtítulo h4&lt;/h4&gt;
+        &lt;h5&gt;Isto é um subtítulo h5&lt;/h5&gt;
+        &lt;h6&gt;Isto é um subtítulo h6&lt;/h6&gt;
+    </code></pre>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <h1>Isto é um título h1</h1>
+    <h2>Isto é um subtítulo h2</h2>
+    <h3>Isto é um subtítulo h3</h3>
+    <h2>Isto é um subtítulo h2</h2>
+    <h4>Isto é um subtítulo h4</h4>
+    <h5>Isto é um subtítulo h5</h5>
+    <h6>Isto é um subtítulo h6</h6>
+
+    <br />
+    <hr />
+
+    <h2>&lt;p&gt;&lt;/p&gt; (Parágrafo)</h2>
+    <p>
+        É a tag padrão para <b>criar blocos de texto</b> comuns.
+    </p>
+    <pre><code class="language-html">
+        Código:
+        &lt;p&gt;Isto é um parágrafo&lt;/p&gt;
+    </code></pre>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Isto é um parágrafo</p>
+
+    <br />
+    <hr />
+
+    <h2>&lt;br /&gt; (Quebra de Linha)</h2>
+    <p>
+        É uma tag autocontida (não tem fechamento) usada para <b>pular uma linha</b> dentro de um texto.
+    </p>
+    <p>
+        <b>O que faz:</b> Se você apertar "Enter" no seu editor de código, o navegador ignora e deixa o texto na mesma
+        linha. Para
+        forçar o texto a ir para a linha de baixo sem criar um parágrafo novo, você joga um <b>&lt;br&gt;</b>.
+    </p>
+
+    <pre><code class="language-html">
+        Código:
+        &lt;p&gt;
+            Isto é uma&lt;br /&gt;
+            quebra&lt;br /&gt;
+            de&lt;br /&gt;
+            linha.
+        &lt;p&gt;
+    </code></pre>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Isto é uma <br />
+        quebra<br />
+        de <br />
+        linha.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>&lt;a&gt;&lt;/a&gt;(Link / Âncora)</h2>
+    <p>
+        É a tag usada para <b>criar links</b> que levam o usuário para outra página. Ela precisa <b>obrigatoriamente de
+            uma
+            propriedade</b>:
+    </p>
+    <p>
+        <b>Atributo href:</b> Abreviação de <i>Hypertext Reference</i> (Referência de Hipertexto). É onde você coloca o
+        <b>endereço do site</b> (a URL) para onde a pessoa será
+        enviada ao clicar.
+    </p>
+
+    <pre><code class="language-html">
+        Código:
+        &lt;a href="https://google.com"&gt;Ir para o Google&lt;/a&gt;
+    </code></pre>
+    <b>
+        <p>Exemplo:</p>
+    </b> <a href="https://google.com">Ir para o Google</a>
+
+    <br>
+    <br>
+    <hr />
+
+    <h2>&lt;img /&gt; (Imagem)</h2>
+    <p>É uma tag autocontida usada para <b>exibir fotos ou ilustrações</b> na tela. Ela não guarda texto dentro dela,
+        por isso
+        usa duas propriedades essenciais:</p>
+    <p>
+        <b>Atributo src:</b> Significa Source (Fonte). É onde você digita o <b>caminho ou o link</b> de internet onde a
+        imagem está
+        salva.
+    </p>
+    <p>
+        <b>Atributo alt:</b> Significa Alternative (Texto Alternativo). É uma descrição por texto da imagem. Ela é
+        fundamental
+        para <b>acessibilidade</b> (lida por cegos) e aparece na tela caso a imagem quebre ou não carregue.
+    </p>
+    <pre>
+        <code class="language-html">
+            Código:
+            &lt;img src="/imgs/dados-html.png" alt='4 dados lado à lado, o primeiro com a cor vermelha escrito "H", 
+            o segundo azul escrito "T", o terceiro amarelo escrito "M" e o último verde escrito "L". 
+            As escritas estão em todas as faces com a cor branca' />
+        </code>
+    </pre>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <img src="/imgs/dados-html.png" alt='4 dados lado à lado, o primeiro com a cor vermelha escrito "H",
+        o segundo azul escrito "T", o terceiro amarelo escrito "M" e o último verde escrito "L".
+        As escritas estão em todas as faces com a cor branca' class="img img-small" />
+
+    <br />
+    <hr>
+
+    <h2>O atributo style=""</h2>
+    <br />
+
+    <hr />
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+
+    <script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

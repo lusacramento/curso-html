@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Listas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <h1>Listas</h1>
+    <p>
+        Para criar qualquer lista no HTML, nós sempre usamos uma tag mãe (que define o tipo de lista) trabalhando em
+        dupla com as tags filhas (que são os itens da lista).
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;li&gt;&lt;/li&gt; (Item da Lista)
+    </h2>
+    <p>
+        Significa List Item (Item da Lista).
+    </p>
+    <p>
+        <b>O que faz:</b> É a tag usada para <b>criar cada linha ou item</b> dentro de uma lista. Ela <b>nunca deve
+            ficar solta no código</b>; precisa sempre estar guardada dentro de uma tag <b>&lt;ul&gt;</b> ou
+        <b>&lt;ol&gt;</b>.
+    </p>
+    <pre><code class="language-html">
+        Código
+        &lt;p&gt;Lista de Compras&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Arroz&lt;/li&gt;
+            &lt;li&gt;Feijão&lt;/li&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+        &lt;/ul&gt;
+    </code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Lista de Compras</p>
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Café</li>
+    </ul>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;ul&gt;&lt;/ul&gt; (Lista Não Ordenada / Com Marcadores)
+    </h2>
+    <p>
+        Significa Unordered List (Lista Não Ordenada).
+    </p>
+    <p>
+        <b>O que faz:</b> Cria uma lista onde a ordem dos fatores não importa. O navegador adiciona automaticamente
+        aquela <b>bolinha preta</b> (bullet point) antes de cada item <b>&lt;li&gt;</b>.
+    </p>
+
+    <pre><code class="language-html">
+        Código:
+        &lt;p&gt;Procedimentos:&lt;/p&gt;
+        &lt;ol&gt;
+            &lt;li&gt;Abra o VS Code&lt;/li&gt;
+            &lt;li&gt;Crie um arquivo index.html&lt;/li&gt;
+            &lt;li&gt;Escreva seu código&lt;/li&gt;
+        &lt;/ol&gt;
+    </code></pre>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Procedimentos:</p>
+    <ol>
+        <li>Abra o VS Code</li>
+        <li>Crie um arquivo index.html</li>
+        <li>Escreva seu código</li>
+    </ol>
+
+    <br />
+    <hr />
+
+    <h3>Atributo type=""</h3>
+    <p>
+        Na lista ordenada <b>(&lt;ol&gt;)</b>, você pode usar o atributo type para mudar os números comuns por outros
+        sistemas de ordenação:
+    </p>
+    <p>Para <b>letras maiúsculas</b>(A, B, C...)</p>
+
+    <pre><code class="language-html">
+        Código:
+        &lt;p&gt;Procedimentos:&lt;/p&gt;
+        &lt;ol type="A" &gt;
+            &lt;li&gt;Abra o VS Code&lt;/li&gt;
+            &lt;li&gt;Crie um arquivo index.html&lt;/li&gt;
+            &lt;li&gt;Escreva seu código&lt;/li&gt;
+        &lt;/ol&gt;
+        </code></pre>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Procedimentos:</p>
+    <ol type="A">
+        <li>Abra o VS Code</li>
+        <li>Crie um arquivo index.html</li>
+        <li>Escreva seu código</li>
+    </ol>
+
+    <br />
+
+    <p>
+        Para <b>Algarismos romanos (I, II, III...)</b>
+    </p>
+    <pre><code class="language-html">
+        Código:
+        &lt;p&gt;Procedimentos:&lt;/p&gt;
+        &lt;ol type="I" &gt;
+            &lt;li&gt;Abra o VS Code&lt;/li&gt;
+            &lt;li&gt;Crie um arquivo index.html&lt;/li&gt;
+            &lt;li&gt;Escreva seu código&lt;/li&gt;
+        &lt;/ol&gt;
+    </code></pre>
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <p>Procedimentos:</p>
+    <ol type="I">
+        <li>Abra o VS Code</li>
+        <li>Crie um arquivo index.html</li>
+        <li>Escreva seu código</li>
+    </ol>
+    <br />
+
+    <hr />
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+
+    <script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

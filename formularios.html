@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulários - Avançado</title>
+    <meta name="description" content="Resumo prático sobre componentes avançados de formulários em HTML.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <h1>Formulários</h1>
+    <p>
+        Para criar qualquer formulário no HTML, nós usamos uma tag mãe que define a área de captura de dados trabalhando
+        em dupla com as tags filhas que criam os campos de digitação, caixas de seleção e botões de envio.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;form&gt;&lt;/form&gt; (O Formulário)
+    </h2>
+    <p>
+        Significa Form (Formulário).
+    </p>
+    <p>
+        <b>O que faz:</b> É a tag principal que <b>envolve todos os campos de entrada</b> de dados. Ela funciona como um
+        envelope que agrupa as informações inseridas pelo usuário para enviá-las a um servidor.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;label&gt;&lt;/label&gt; (Etiqueta do Campo)
+    </h2>
+    <p>
+        Significa Label (Etiqueta/Rótulo).
+    </p>
+    <p>
+        <b>O que faz:</b> Vincula um <b>texto explicativo</b> a um campo <b>&lt;input /&gt;</b>. Melhora a
+        acessibilidade do site e permite que o usuário clique no texto para ativar a caixa de digitação correspondente.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;input /&gt; (Campo de Entrada)
+    </h2>
+    <p>
+        Significa Input (Entrada). É uma tag <b>autocontida</b> (não possui fechamento).
+    </p>
+    <p>
+        <b>O que faz:</b> Cria uma caixa onde o usuário pode interagir. O seu comportamento muda completamente
+        dependendo do atributo <b>type</b> utilizado (como text, email, password ou number).
+    </p>
+
+    <pre><code class="language-html">
+            Código:
+            &lt;form action=""&gt;
+                &lt;label for="nome"&gt;Nome&lt;/label&gt;
+                &lt;input type="text" name="nome" id="exemplo-input-nome" /&gt;
+                &lt;br /&gt;
+                &lt;label for="idade"&gt;Idade&lt;/label&gt;
+                &lt;input type="number" name="idade" id="exemplo-input-idade"&gt;
+                &lt;br /&gt;
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                &lt;input type="email" name="email" id="exemplo-input-email" /&gt;
+                <br />
+                &lt;label for="senha"&gt;senha&lt;/label&gt;
+                &lt;input type="password" name="senha" /&gt;
+            </form>
+        </code></pre>
+
+    <p><b>Exemplo:</b></p>
+    <form action="">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="exemplo-input-nome" />
+        <br />
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="exemplo-input-idade">
+        <br />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="exemplo-input-email" />
+        <br />
+        <label for="senha">senha</label>
+        <input type="password" name="senha" />
+    </form>
+
+    <br />
+    <hr />
+
+    <h2>
+        Botões de Rádio (type="radio")
+    </h2>
+    <p>
+        <b>O que faz:</b> Criados através da tag <b>&lt;input /&gt;</b> com o atributo <b>type="radio"</b>. Permitem que
+        o usuário escolha <b>apenas uma única opção</b> dentro de um grupo. Para que o grupo funcione corretamente e o
+        navegador saiba que eles pertencem juntos, todos devem compartilhar exatamente o mesmo atributo <b>name</b>.
+    </p>
+    <pre><code class="language-html">
+        Código:
+        &lt;form&gt;
+            &lt;input type="radio" id="m" name="genero" value="M"&gt;
+            &lt;label for="m"&gt;Masculino&lt;/label&gt;
+            &lt;input type="radio" id="f" name="genero" value="F"&gt;
+            &lt;label for="f"&gt;Feminino&lt;/label&gt;
+        &lt;/form&gt;
+    </code></pre>
+
+    <p><b>Exemplo:</b></p>
+    <input type="radio" id="m" name="genero" value="M">
+    <label for="m">Masculino</label>
+    <input type="radio" id="f" name="genero" value="F">
+    <label for="f">Feminino</label>
+
+    <br />
+    <hr />
+
+    <h2>
+        Caixas de Seleção (type="checkbox")
+    </h2>
+    <p>
+        <b>O que faz:</b> Criados através da tag <b>&lt;input /&gt;</b> com o atributo <b>type="checkbox"</b>. Permitem
+        que o usuário selecione <b>múltiplas opções</b> ao mesmo tempo, ou marque opções independentes de "sim ou não"
+        (como aceitar os termos de uso).
+    </p>
+
+    <pre><code class="language-html">
+        &lt;form action=""&gt;
+            &lt;input type="checkbox" id="termos" name="termos"&gt;
+            &lt;label for="termos"&gt;Aceito os termos de uso&lt;/label&gt;
+        &lt;/form&gt;
+    </code></pre>
+
+    <p><b>Exemplo:</b></p>
+
+    <form action="">
+        <input type="checkbox" id="termos" name="termos">
+        <label for="termos">Aceito os termos de uso</label>
+    </form>
+
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;select&gt; e &lt;option&gt; (Lista Suspensa / Dropdown)
+    </h2>
+    <p>
+        <b>O que faz:</b> A tag mãe <b>&lt;select&gt;</b> cria uma lista de seleção onde o usuário clica para abrir as
+        opções ocultas. Cada item selecionável dentro dessa lista deve ser criado utilizando a tag filha
+        <b>&lt;option&gt;</b>. Ideal para economizar espaço visual na tela.
+    </p>
+
+    <pre><code class="language-html">
+        Código:
+        &lt;form action=""&gt;
+            &lt;select id="pais" name="pais"&gt;
+                &lt;option value="br"&gt;Brasil&lt;/option&gt;
+                &lt;option value="pt"&gt;Portugal&lt;/option&gt;
+                &lt;option value="usa"&gt;Estados Unidos&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/form&gt;
+
+    </code></pre>
+
+    <p><b>
+            Exemplo:
+        </b>
+    </p>
+    <form action="">
+        <select id="pais" name="pais">
+            <option value="br">Brasil</option>
+            <option value="pt">Portugal</option>
+            <option value="usa">Estados Unidos</option>
+        </select>
+    </form>
+
+
+    <br />
+    <hr />
+
+    <h2>
+        &lt;button&gt;&lt;/button&gt; (Botão)
+    </h2>
+    <p>
+        Significa Button (Botão).
+    </p>
+    <p>
+        <b>O que faz:</b> Cria um <b>botão clicável</b>. Quando colocado dentro de um formulário, o comportamento padrão
+        dele é disparar a ação de envio (submissão) de todos os dados preenchidos.
+    </p>
+
+    <pre><code class="language-html">
+        Código:
+        &lt;form action="submit"&gt;
+            &lt;button type="reset"&gt;Limpar&lt;/button&gt;
+            &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+        &lt;/form&gt;
+    </code></pre>
+
+    <p><b>Exemplo:</b></p>
+    <form action="submit">
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <h2>Exemplo completo</h2>
+
+    <pre><code class="language-html">&lt;form&gt;
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome"&gt;
+
+    &lt;p&gt;Selecione seu turno:&lt;/p&gt;
+    &lt;input type="radio" id="manha" name="turno" value="M"&gt;
+    &lt;label for="manha"&gt;Manhã&lt;/label&gt;
+    &lt;input type="radio" id="noite" name="turno" value="N"&gt;
+    &lt;label for="noite"&gt;Noite&lt;/label&gt;
+
+    &lt;p&gt;Interesses:&lt;/p&gt;
+    &lt;input type="checkbox" id="html" name="interesses" value="html"&gt;
+    &lt;label for="html"&gt;HTML&lt;/label&gt;
+    &lt;input type="checkbox" id="css" name="interesses" value="css"&gt;
+    &lt;label for="css"&gt;CSS&lt;/label&gt;
+
+    &lt;label for="estado"&gt;Estado:&lt;/label&gt;
+    &lt;select id="estado" name="estado"&gt;
+        &lt;option value="SP"&gt;São Paulo&lt;/option&gt;
+        &lt;option value="MG"&gt;Minas Gerais&lt;/option&gt;
+        &lt;option value="RJ"&gt;Rio de Janeiro&lt;/option&gt;
+    &lt;/select&gt;
+    
+    &lt;button type="submit"&gt;Enviar Cadastro&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <b>
+        <p>Exemplo:</p>
+    </b>
+    <form onsubmit="event.preventDefault(); alert('Dados enviados!');"
+        style="background: #eee; padding: 15px; border-radius: 4px; max-width: 400px; font-family: sans-serif;"
+        class="form">
+        <div style="margin-bottom: 15px;">
+            <label for="nome_ex" style="display: block; margin-bottom: 5px; font-weight: bold;">Nome:</label>
+            <input type="text" id="nome_ex" name="nome" style="width: 100%; padding: 5px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <span style="display: block; margin-bottom: 5px; font-weight: bold;">Selecione seu turno:</span>
+            <input type="radio" id="manha_ex" name="turno" value="M">
+            <label for="manha_ex" style="margin-right: 15px;">Manhã</label>
+            <input type="radio" id="noite_ex" name="turno" value="N">
+            <label for="noite_ex">Noite</label>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <span style="display: block; margin-bottom: 5px; font-weight: bold;">Interesses:</span>
+            <input type="checkbox" id="html_ex" name="interesses" value="html">
+            <label for="html_ex" style="margin-right: 15px;">HTML</label>
+            <input type="checkbox" id="css_ex" name="interesses" value="css">
+            <label for="css_ex">CSS</label>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label for="estado_ex" style="display: block; margin-bottom: 5px; font-weight: bold;">Estado:</label>
+            <select id="estado_ex" name="estado" style="width: 100%; padding: 5px;">
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="RJ">Rio de Janeiro</option>
+            </select>
+        </div>
+        <button type="reset"
+            style="padding: 7px 15px; cursor: pointer; background: grey; color: white; border: none; border-radius: 3px;">Limpar
+            Cadastro</button>
+        <button type="submit"
+            style="padding: 7px 15px; cursor: pointer; background: #007acc; color: white; border: none; border-radius: 3px;">Enviar
+            Cadastro</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+
+    <script src="/js/prism.js"></script>
+</body>
+
+</html>
