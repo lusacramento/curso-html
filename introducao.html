@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Introdução ao Desenvolvimento Web</title>
+    <meta name="description" content="Primeira página do curso de HTML: conceitos básicos, IDE e ambiente Linux Mint.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/prism.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <h1>Introdução e Ambiente de Desenvolvimento</h1>
+    <p>
+        Bem-vindo à primeira página do curso. Antes de escrevermos nossa primeira linha de código, precisamos entender o
+        que é a engrenagem da internet e preparar a nossa bancada de trabalho no sistema operacional.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>O que é HTML?</h2>
+    <p>
+        Significa HyperText Markup Language (Linguagem de Marcação de Hipertexto). Diferente do que muitos pensam, o
+        HTML <b>não é uma linguagem de programação</b>, pois não possui lógica ou processamento de dados.
+    </p>
+    <p>
+        <b>O que faz:</b> Ele funciona estritamente como a <b>estrutura e o esqueleto</b> de uma página web. Através de
+        etiquetas conhecidas como tags, nós marcamos onde fica cada título, parágrafo, imagem ou link do nosso site.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>O que é uma IDE e um Editor de Código?</h2>
+    <p>
+        Significa Integrated Development Environment (Ambiente de Desenvolvimento Integrado). Enquanto um editor de
+        código simples é apenas um bloco de notas avançado, uma IDE é uma <b>bancada de trabalho completa</b> que traz
+        ferramentas de automação, terminal integrado e extensões que ajudam o programador a trabalhar mais rápido.
+    </p>
+    <p>
+        Neste curso, utilizaremos o <b>Visual Studio Code (VS Code)</b>, que é atualmente o editor mais popular, leve e
+        poderoso do mercado global.
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>Como Instalar o VS Code no Linux Mint</h2>
+    <p>
+        No <b>Linux Mint</b>, a forma mais segura, oficial e recomendada para instalar o VS Code e mantê-lo sempre
+        atualizado é adicionando o repositório oficial da Microsoft via terminal.
+    </p>
+
+    <p><b>Passo a Passo de Instalação (Abra o Terminal):</b></p>
+
+    <pre><code class="language-bash"># 1. Atualize a lista de pacotes do sistema
+sudo apt update
+
+# 2. Instale as dependências necessárias para segurança de chaves
+sudo apt install apt-transport-https curl
+
+# 3. Importe a chave de segurança oficial da Microsoft
+curl -sSL https://microsoft.com | sudo gpg --dearmor -o /usr/share/keyrings/ms-vscode-keyring.gpg
+
+# 4. Adicione o repositório oficial do VS Code às fontes do sistema
+echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/ms-vscode-keyring.gpg] https://microsoft.com stable main" | sudo tee /etc/apt/sources.get.d/vscode.list
+
+# 5. Atualize novamente a lista de pacotes e instale o VS Code
+sudo apt update
+sudo apt install code</code></pre>
+
+    <br />
+    <hr />
+
+    <h2>Como a Web Funciona? (O Modelo Cliente-Servidor)</h2>
+    <p>
+        Sempre que você digita um endereço no navegador, acontece uma conversa entre dois computadores na internet:
+    </p>
+    <p>
+        <b>O Cliente:</b> É o seu computador ou celular (usando o navegador). Ele faz uma <b>requisição HTTP</b> (um
+        pedido) solicitando os arquivos de um site.
+    </p>
+    <p>
+        <b>O Servidor:</b> É um computador potente ligado 24h em algum lugar do mundo (como os servidores do GitHub
+        Pages). Ele recebe o pedido, processa a informação e envia uma <b>resposta HTTP</b> contendo os arquivos
+        estruturados (o seu arquivo <b>&lt;html&gt;</b>).
+    </p>
+
+    <br />
+    <hr />
+
+    <h2>A Tríade da Web: HTML, CSS e JavaScript</h2>
+    <p>
+        Um site moderno e profissional é composto obrigatoriamente por três tecnologias trabalhando juntas de forma
+        integrada:
+    </p>
+    <p>
+        1. <b>HTML:</b> É o <b>esqueleto</b>. Define os textos, botões e a estrutura bruta do site.
+    </p>
+    <p>
+        2. <b>CSS:</b> É a <b>roupa e a maquiagem</b>. Define as cores, fontes, alinhamentos, espaçamentos e deixa o
+        site bonito e responsivo para celulares.
+    </p>
+    <p>
+        3. <b>JavaScript:</b> É o <b>cérebro e os músculos</b>. Define o comportamento dinâmico, animações, lógica,
+        cliques em botões e validações em tempo real.
+    </p>
+
+    <br />
+    <hr />
+
+    <div style="display: flex; justify-content: center;">
+        <button onclick="history.back()">Voltar</button>
+    </div>
+
+    <script src="js/prism.js"></script>
+</body>
+
+</html>
